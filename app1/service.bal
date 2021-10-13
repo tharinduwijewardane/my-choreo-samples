@@ -3,7 +3,7 @@ import ballerina/io;
 
 service /hello on new http:Listener(9090) {
 
-    resource function get sayHello(http:Caller caller, http:Request request) {
+    resource function 'default sayHello(http:Caller caller, http:Request request) {
 
         error? result = caller->respond("Hello Ballerina!");
         if (result is error) {
